@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We sure don't pay</title>
+    <!-- link css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- link Boostrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+    <!-- header -->
+    <header class="header-app">
+        <div class="logoWrapper">
+            <div class="logotypeWrapper">
+                <img src="imgs/logotype.png" class="logotype" alt="logo-type">
+            </div>
+            <span>We sure don't pay</span>
+        </div>
+        <i class="bi bi-list listNavbar" id="listNavbar"></i>
+        <div class="navbarWrapperDesktop">
+            <ul class="linksNavigationWrapper">
+                <li class="linksItems">Home</li>
+                <li class="linksItems">Products</li>
+                <li class="linksItems">Insaurances</li>
+                <li class="linksItems">Contact</li>
+            </ul>
+            <div class="signBtnsWrapper">
+                <button class="signBtn">Sign in</button>
+                <button class="signBtn">Sign up for free</button>
+            </div>
+        </div>
+        <div class="navbarWrapperMobile" id="navbarWrapperMobile">
+            <i class="bi bi-x closeMobile" id="closeMobile"></i>
+            <ul class="linksNavigationWrapper">
+                <li class="linksItems">Home</li>
+                <li class="linksItems">Products</li>
+                <li class="linksItems">Insaurances</li>
+                <li class="linksItems">Contact</li>
+            </ul>
+            <div class="signBtnsWrapper">
+                <button class="signBtn">Sign in</button>
+                <button class="signBtn">Sign up for free</button>
+            </div> 
+        </div>
+    </header>
+    <!-- content -->
+    <main class="content-app">
+        <div class="hero-wrapper">
+            <div class="titleContainer">
+                <h2 class="insurance">our insurance</h2>
+                <h1 class="title">Get started now, just choose insurance.</h1>
+            </div>
+            <section class="content-form-wrapper">
+                <!-- img-wrapper -->
+                <div class="imgFormWrapper">
+                    <img src="imgs/imgForm.png" class="imgForm" alt="img-content-form">
+                </div>
+                <!-- form -->
+                <form class="formActions">
+                    <div class="groupNameAndSurname">
+                        <div class="groupName">
+                            <label>nombre:</label>
+                            <input class="formInput" type="text">
+                        </div>
+                        <div class="groupSurname">
+                            <label>Apellido:</label>
+                            <input class="formInput" type="text">
+                        </div>
+                    </div>
+                    <label>DNI:</label>
+                    <input class="formInput" type="number">
+                    <label>Email:</label>
+                    <input class="formInput" type="email">
+                    <label>Telefono:</label>
+                    <input class="formInput" type="number">
+                    <div class="groupInsurance">
+                        <label>tipo de seguro:</label>
+                        <select name="selected-your-insurance" class="formSelect" id="formSelect">
+                            <option value="basico">Basico</option>
+                            <option value="intermedio">intermedio</option>
+                            <option value="premium">Premium</option>
+                        </select>
+                    </div>
+                    <div class="paymountAmountContainer">
+                        <div>
+                            <span>monto de seguro</span>
+                            <span id="priceInsurance">$0</span>
+                        </div>
+                        <button class="paymentBtn">
+                            upgrade
+                        </button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main>
+    <script src="/app.js"></script>
+</body>
+</html>
