@@ -1,0 +1,292 @@
+/* importando la fuente de familia */
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500&family=Poppins:wght@500;600;700&display=swap');
+
+/* variables */
+:root{
+    --bg-app: #fff;
+    --clr-app: #002E25; 
+    --primary: #CDFA89;
+    --primary-hover: #cdfa89b4;
+    --radius: .3em;
+    --border-clr: #beb9b954;
+    --bg-navbar-mobile: #053229;
+    --trans: 100ms;
+    --padding: .5em;
+}
+
+/* NORMALIZAMOS LOS ESTILOS  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* estilizando al body */
+body{
+    padding: 2em 5em;
+    background-color: var(--bg-app);
+    color: var(--clr-app);
+}
+
+/* estilzando el header-app > menu de navegacion */
+.header-app{
+    display: flex;
+    justify-content: space-between;
+    padding: .5em 0;
+    gap: 5em;
+}
+
+.logoWrapper{
+    display: flex;
+    align-items: center;
+    gap: .2em;
+}
+
+.logotypeWrapper{
+    height: 1.5em;
+    width: 1.5em;
+}
+
+.logotype{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.listNavbar{
+    display: none;
+}
+
+.navbarWrapperDesktop{
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbarWrapperMobile{
+    display: none;
+}
+
+.linksNavigationWrapper{
+    display: flex;
+    align-items: center;
+    gap: 3em;
+}
+
+.linksItems{
+    list-style: none;
+    padding: var(--padding);
+    transition: background-color, var(--trans);
+}
+
+.linksItems:hover{
+    background-color: var(--primary);
+    cursor: pointer;
+    border-radius: var(--radius);
+}
+
+.signBtnsWrapper{
+    display: flex;
+    align-items: center;
+    gap: .8em;
+}
+
+.signBtn{
+    background-color: var(--primary);
+    border-radius: var(--radius);
+    padding: var(--padding);
+    border: none;
+    transition: hover, var(--trans);
+}
+
+.signBtn:hover{
+    background-color: var(--primary-hover);
+    cursor: pointer;
+}
+
+.content-app{
+    margin-top: 3em;
+}
+
+.titleContainer{
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    gap: .5em;
+}
+
+/* estilizando el titulo */
+.title{
+    text-align: center;
+    font-size: 2.3em;
+}
+
+/* estilizando la clase insurance */
+.insurance{
+    font-size: 1em;
+    font-weight: 500;
+    color: var(--primary);
+}
+
+.content-form-wrapper{
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 3em 5em;
+}
+
+.imgFormWrapper{
+    flex: 1;
+    height: 28em;
+}
+
+.imgForm{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* estilizando el formulario */
+.formActions{
+    display: flex;
+    flex-direction: column;
+    gap: .8em;
+    margin-top: 2em;
+}
+
+/* estilizando los inputs del formulario */
+.formInput{
+    border: 1px solid var(--border-clr);
+    border-radius: var(--radius);
+    padding: .35em;
+    outline: none;
+    background-color: transparent;
+    width: 100%;
+    transition: hover, var(--trans);
+}
+
+.formInput:hover{
+    cursor: pointer;
+    border-color: var(--primary-hover);
+}
+
+.formInput:focus{
+    border-color: var(--primary-hover);
+}
+
+.groupNameAndSurname{
+    display: flex;
+    justify-content: space-between;
+    gap: 10em;
+}
+
+:is(.groupName, .groupSurname){
+    display: flex;
+    gap: 1em;
+}
+
+.groupInsurance{    
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.paymountAmountContainer{
+    margin-top: 2em;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+:is(.formSelect, .paymentBtn){
+    background-color: var(--primary);
+    border-radius: var(--radius);
+    padding: var(--padding);
+    border: none;
+    transition: hover, var(--trans);
+}
+
+:is(.paymentBtn, .formSelect):hover{
+    background-color: var(--primary-hover);
+    cursor: pointer;
+}
+
+/* media queries */
+@media screen and (max-width:1550px) {
+    .imgFormWrapper{
+        height: 32em;
+    }
+}
+
+@media screen and (max-width:1400px) {
+    .content-form-wrapper{
+        flex-direction: column;
+        padding: 3em 15em;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .content-form-wrapper{
+        padding: 3em 10em;
+    }
+}
+
+@media screen and (max-width:1100px) {
+    .listNavbar{
+        display: block;
+    }
+
+    .navbarWrapperDesktop{
+        display: none;
+    }
+
+    .closeMobile{
+        font-size: 2em;
+    }
+    
+    .closeMobile:hover{
+        cursor: pointer;
+        color: var(--primary-hover);
+    }
+
+    .navbarWrapperMobile{
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 1.2em;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        padding: 3em;
+        background-color: var(--bg-navbar-mobile);
+        color: var(--primary);
+    }
+
+    .navbarWrapperMobileActive{
+        display: flex;
+    }
+
+    :is(.linksNavigationWrapper, .signBtnsWrapper){
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .linksItems:hover{
+        color: var(--primary-hover);
+    }
+
+    .content-form-wrapper{
+        padding: 3em 2em;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .content-form-wrapper{
+        padding: 3em 0em;
+    }
+
+    body{
+        padding: 2em 2em;
+    }
+}
